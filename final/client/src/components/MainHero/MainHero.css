@@ -1,0 +1,66 @@
+.MainHero {
+  background-color: rgb(218, 247, 255);
+  padding-bottom: 2rem;
+}
+
+.header-container {
+  padding: 3rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-container h2 {
+  font-size: 2.75rem;
+  margin-right: 2rem;
+}
+
+.header-container img {
+  width: 15rem;
+}
+
+.cards-container {
+  padding: 0 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 23%;
+  background-color: white;
+  height: 20rem;
+  padding: 1rem;
+}
+
+.card p {
+  font-weight: 900;
+  margin-top: 1rem;
+  font-size: 0.75rem;
+}
+
+.card img {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.boxs-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.box-container {
+  background-color: rgba(238, 130, 238, 0.151);
+  width: 49%;
+  height: 5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.box-container img {
+  width: 5rem;
+}
