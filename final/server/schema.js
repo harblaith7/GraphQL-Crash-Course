@@ -5,8 +5,14 @@ const typeDefs = gql`
     title: String
     author: String
   }
+  type Animal {
+    title: String
+    price: String
+    img: String
+  }
   type Query {
     books: [Book]
+    animals: [Animal]
   }
 `;
 
