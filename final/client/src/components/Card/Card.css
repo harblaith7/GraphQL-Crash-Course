@@ -1,5 +1,4 @@
 .card-display {
-  padding: 3rem;
 }
 
 .card-display-container {
@@ -16,6 +15,12 @@
   width: 23%;
   margin-top: 2rem;
   cursor: pointer;
+  color: black
+}
+
+.Card:hover {
+  text-decoration: none;
+  color: black
 }
 
 .Card img {
@@ -50,18 +55,20 @@
 }
 
 .card-price h4 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
   font-weight: 400;
 }
 
 .card-prime {
   margin-top: 0.2rem;
+  font-size: 1.25rem
 }
 
 .card-prime span {
   color: rgb(33, 145, 193);
   font-weight: 700;
   margin-right: 0.2rem;
+  font-size: 1.25rem;
 }
 
 .card-prime .bold {

@@ -7,7 +7,7 @@ import cart from '../../assets/svg/shopping-cart.svg'
 export default function Nav() {
     return (
         <div className="Nav">
-            <Container className="nav-container">
+            <div className="nav-container">
                 <h4 className="header">animazon<span>.com</span></h4>
                 <div className="nav-delivery-info-container">
                     <p>Deliver to Laith</p>
@@ -34,7 +34,7 @@ export default function Nav() {
                     <img src={cart}/>
                     <h2>cart</h2>
                 </div>
-            </Container>
+            </div>
         </div>
     )
 }

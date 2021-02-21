@@ -21,16 +21,16 @@
 }
 
 .cards-container {
-  padding: 0 3rem;
   display: flex;
   justify-content: space-between;
 }
 
 .card {
-  width: 23%;
+  width: 32%;
   background-color: white;
-  height: 20rem;
+  height: 25rem;
   padding: 1rem;
+  padding-bottom: 6rem;
 }
 
 .card p {
@@ -41,6 +41,7 @@
 
 .card img {
   width: 100%;
+  height: 100%;
   margin-top: 1rem;
 }
 

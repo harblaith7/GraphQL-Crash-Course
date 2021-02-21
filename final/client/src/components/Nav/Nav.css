@@ -1,6 +1,6 @@
 .Nav {
   background-color: rgb(19, 25, 33);
-  height: 10vh;
+  height: 7.5vh;
   display: flex;
   align-items: center;
   padding: 0 2rem;
@@ -8,6 +8,8 @@
 
 .nav-container {
   display: flex;
+  width: 100%;
+  align-items: center;
 }
 
 .header {
@@ -33,9 +35,16 @@
   font-size: 1rem;
 }
 
+.nav-delivery-info-container p {
+  margin-bottom: 0;
+}
+
 .nav-input-container {
   margin-left: 2rem;
   display: flex;
+  height: 2.25rem;
+  align-self: center;
+  width: 75%
 }
 
 .nav-input-container select {
@@ -50,7 +59,7 @@
   height: 100%;
   padding: 0.2rem;
   border: none;
-  width: 30rem;
+  width: 100%;
 }
 
 .nav-input-container select:focus {
@@ -62,7 +71,7 @@
   width: 3rem;
   border: none;
   border-radius: 0 0.2rem 0.2rem 0;
-  height: 2.5rem;
+  height: 2.25rem;
 }
 
 .nav-btn img {

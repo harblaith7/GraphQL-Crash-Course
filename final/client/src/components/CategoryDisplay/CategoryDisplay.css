@@ -1,0 +1,30 @@
+.CategoryDisplay {
+    padding-top: 2rem 
+}
+.CategoryDisplay-card {
+    border-radius: 100%;
+    overflow: hidden;
+    width: 15rem;
+    height: 15rem;
+    padding-bottom: 2rem;
+}
+
+.CategoryDisplay-card-container {
+    width: 15rem;
+    text-align: center;
+}
+
+.CategoryDisplay-card img {
+    height: 100%;
+    width: 100%
+}
+
+.CategoryDisplay-card-container h3 {
+   text-align: center;
+   margin-top: -2rem;
+}
+
+.CategoryDisplay-container {
+    display: flex;
+    justify-content: space-between;
+}
