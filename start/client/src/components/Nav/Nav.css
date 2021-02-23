@@ -1,0 +1,94 @@
+.Nav {
+  background-color: rgb(19, 25, 33);
+  height: 7.5vh;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.nav-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.header {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.header span {
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.nav-delivery-info-container {
+  margin-left: 2rem;
+  font-size: 0.7rem;
+  color: rgb(184, 181, 181);
+  font-weight: 700;
+}
+
+.nav-delivery-info-container h2 {
+  color: white;
+  font-size: 1rem;
+}
+
+.nav-delivery-info-container p {
+  margin-bottom: 0;
+}
+
+.nav-input-container {
+  margin-left: 2rem;
+  display: flex;
+  height: 2.25rem;
+  align-self: center;
+  width: 75%
+}
+
+.nav-input-container select {
+  height: 100%;
+  border-radius: 0.2rem 0 0 0.2rem;
+  padding: 0.2rem;
+  background-color: rgb(218, 218, 218);
+  border-color: rgba(128, 128, 128, 0.315);
+}
+
+.nav-input-container input {
+  height: 100%;
+  padding: 0.2rem;
+  border: none;
+  width: 100%;
+}
+
+.nav-input-container select:focus {
+  outline: none;
+}
+
+.nav-btn {
+  background-color: rgb(254, 189, 105);
+  width: 3rem;
+  border: none;
+  border-radius: 0 0.2rem 0.2rem 0;
+  height: 2.25rem;
+}
+
+.nav-btn img {
+  width: 1.35rem;
+}
+
+.nav-cart-container {
+  margin-left: 2rem;
+  display: flex;
+  color: white;
+}
+
+.nav-cart-container img {
+  width: 2rem;
+}
+.nav-cart-container h2 {
+  margin-top: 0.75rem;
+  font-size: 1.25rem;
+  margin-left: 0.25rem;
+}

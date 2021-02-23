@@ -1,0 +1,76 @@
+.card-display {
+}
+
+.card-display-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.main-img {
+  height: 12.5rem;
+}
+
+.Card {
+  width: 23%;
+  margin-top: 2rem;
+  cursor: pointer;
+  color: black
+}
+
+.Card:hover {
+  text-decoration: none;
+  color: black
+}
+
+.Card img {
+  width: 100%;
+}
+
+.Card h4 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0.2rem;
+}
+
+.card-start {
+  margin-top: 0.2rem;
+  display: flex;
+}
+
+.card-start img {
+  width: 1.2rem;
+  margin-right: 0.2rem;
+}
+
+.card-price {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.card-price p {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  margin-right: 0.05rem;
+}
+
+.card-price h4 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.card-prime {
+  margin-top: 0.2rem;
+  font-size: 1.25rem
+}
+
+.card-prime span {
+  color: rgb(33, 145, 193);
+  font-weight: 700;
+  margin-right: 0.2rem;
+  font-size: 1.25rem;
+}
+
+.card-prime .bold {
+  color: black;
+}

@@ -1,27 +1,20 @@
-const { animals, categories, cards } = require("../db");
-
 const Query = {
-    animals(parent, args, ctx, info){
-      return animals
+    mainCards: (parent, args, { mainCards }) => mainCards,
+    animals: (parent, args, { animals }) => animals,
+    animal: (parent, args, { animals }) => {
+        let animal = animals.find((animal) => {
+            return animal.slug === args.slug
+        })
+        return animal
     },
-    animal(parent, args, ctx, info){
-      return animals.find((animal) => {
-        return animal.slug == args.slug
-      })
-    },
-    categories(parent, args, ctx, info){
-      return categories
-    },
-    category(parent, args, ctx, info){
-      return categories.find((category) => {
-        return category.slug == args.slug
-      })
-    },
-    cards(parent, args, ctx, info){
-        return cards
+    categories: (parent, args, { categories }) => categories,
+    category: (parent, args, { categories }) => {
+      let category = categories.find((category) => {
+        return category.slug === args.slug
+      });
+      return category;
     }
 }
 
-module.exports = {
-    Query
-}
+module.exports = Query
+

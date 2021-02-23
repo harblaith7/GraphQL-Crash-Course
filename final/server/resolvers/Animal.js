@@ -1,13 +1,9 @@
-const { animals, categories } = require("../db");
-
 const Animal = {
-    category(parent, args, ctx, info) {
-      return categories.find((category) => {
-        return parent.category === category.id
-      })
-    }
-  }
-
-module.exports = {
-    Animal
+    category: (parent, args, { categories }) => {
+        return categories.find((category) => {
+          return category.id === parent.category
+        })
+      }  
 }
+
+module.exports = Animal

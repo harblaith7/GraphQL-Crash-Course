@@ -3,37 +3,41 @@ import { Container } from 'react-bootstrap'
 import animals from "../../assets/images"
 import star from "../../assets/svg/star.svg"
 import "./AnimalPage.css"
-import { gql, useQuery } from "@apollo/client"
 import { useParams } from "react-router-dom"
+import { useQuery, gql } from "@apollo/client"
 
-const FETCH_ANIMAL_DATA = gql`
-    query($slug: String!){
-        animal(slug: $slug){
-            title
-            img
-            price
-            stock
-        }
-    }
+const ANIMAL_QUERY = gql`
+query($slug: String!){
+  animal(slug: $slug) {
+    title
+    image
+    stock
+    description
+    price
+  }
+}
 `
 
 function AnimalPage() {
 
     const { slug } = useParams();
 
-    const { data, loading, error } = useQuery(FETCH_ANIMAL_DATA, {
+    const { data, loading, error } = useQuery(ANIMAL_QUERY, {
         variables: {
             slug
         }
     })
 
-    if(loading || error) return <div>loading...</div>
+    if(loading) return <div>loading...</div>
+
+    if(error) return <div>error...</div>
+    console.log(data)
 
     return (
         <div className="py-5">
             <Container>
                 <div className="d-flex">
-                    <img className="product-img" src={animals[data.animal.img]} style={{marginRight: "1rem"}}/>
+                    <img src={animals[data.animal.image]} className="product-img"  style={{marginRight: "1rem"}}/>
                 <div className="text-container">
                         <h1>{data.animal.title}</h1>
                         <div className="star-container">
@@ -50,10 +54,9 @@ function AnimalPage() {
                         </div>
                         <div className="about-container">
                             <h4>About this Animal</h4>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                            <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                            <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
-                            <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+                            {data.animal.description.map(description => {
+                                return <li>{description}</li>
+                            })}
                         </div>
                     </div>
                     <div className="cart-container border">

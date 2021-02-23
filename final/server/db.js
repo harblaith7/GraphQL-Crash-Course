@@ -1,3 +1,18 @@
+const mainCards = [
+    {
+      title: "Recently Viewed",
+      image: "lion",
+    },
+    {
+      title: 'Looking for a Gift?',
+      image: 'penguin',
+    },
+    {
+      title: 'Best Behaved',
+      image: 'cat',
+    },
+];
+
 const animals = [
     {
         id: "1",
@@ -129,63 +144,36 @@ const animals = [
         category: "4"
     }
   ]
-  
-  const categories = [
-    {
-        id: 1,
-        category: "cats",
-        slug: "cats",
-        img: "tiger"
-    },
-    {
-        id: 2,
-        category: "reptiles",
-        slug: "reptiles",
-        img: "snake"
-    },
-    {
-        id: 3,
-        category: "ocean creatures",
-        slug: "ocean-creatures",
-        img: "stingray"
-    },
-    {
-        id: 4,
-        category: "mammals",
-        slug: "mammals",
-        img: "donkey"
-    }
-  ]
 
-  const cards = [
-    {
-        id: 1,
-        title: "Recently Viewed",
-        bought: true,
-        msg: "This is the best thing you bought",
-        price: 42.32,
-        img: "lion"
-    },
-    {
-        id: 2,
-        title: "Looking for a Gift?",
-        bought: true,
-        msg: "This is the best thing you bought",
-        price: 42.32,
-        img: "penguin"
-    },
-    {
-        id: 3,
-        title: "Best Behaved",
-        bought: true,
-        msg: "This is the best thing you bought",
-        price: 42.32,
-        img: "cat"
-    }
+  const categories = [
+      {
+          id: "1",
+          image: "tiger",
+          category: "cats",
+          slug: "cats"
+      },
+      {
+        id: "2",
+        image: "snake",
+        category: "reptiles",
+        slug: "reptiles"
+      },
+      {
+        id: "3",
+        image: "stingray",
+        category: "ocean creatures",
+        slug: "ocean-creatures"
+      },
+      {
+        id: "4",
+        image: "donkey",
+        category: "mammals",
+        slug: "mammals"
+      }
   ]
 
 module.exports = {
+    mainCards,
     animals,
-    categories,
-    cards
+    categories
 }

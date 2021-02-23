@@ -1,10 +1,10 @@
 import React from 'react'
-import { gql, useQuery } from "@apollo/client"
 import { useParams } from "react-router-dom"
 import { Container } from 'react-bootstrap'
 import CardDisplay from '../components/CardDisplay/CardDisplay'
+import { useQuery, gql } from "@apollo/client"
 
-const FETCH_CATEGORY_ANIMALS =  gql`
+const CATEGORY_QUERY = gql`
 query($slug: String!){
   category(slug: $slug) {
     id
@@ -14,7 +14,7 @@ query($slug: String!){
       id
       title
       price
-      img
+      image
     }
   }
 }
@@ -22,14 +22,19 @@ query($slug: String!){
 
 function CategoryPage() {
     
-    const { slug } = useParams()
-    const { data, loading, error } = useQuery(FETCH_CATEGORY_ANIMALS, {
+    const { slug } = useParams();
+
+    const {error, data, loading } = useQuery(CATEGORY_QUERY, {
         variables: {
             slug
         }
     })
 
-    if(loading || error ) return <div>loading...</div>;
+    if(loading) return <div>Loading...</div>;
+
+    if(error) return <div>Error....</div>
+
+    console.log(data)
 
     return (
         <div className="py-5">
